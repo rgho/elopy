@@ -1,5 +1,4 @@
-
-def new_ratings(player1_rating,player2_rating,k_value,result,shouldRound=False):
+def new_ratings(player1_rating,player2_rating,k_value,result,should_round=False):
 	#Assign actual individual results
 	player1_result = result
 	player2_result = 1 - result
@@ -13,7 +12,7 @@ def new_ratings(player1_rating,player2_rating,k_value,result,shouldRound=False):
    	player2_new_rating = player2_rating + (k_value*(player2_result - player2_chances)) 
    	
    	#Optional rounding
-   	if shouldRound:
+   	if should_round:
    		player1_new_rating = round(player1_new_rating)
    		player2_new_rating = round(player2_new_rating) 
 

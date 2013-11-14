@@ -40,6 +40,8 @@ class Match(object):
       player1.update_rating(ratings_after_match['player1'])
       player2.update_rating(ratings_after_match['player2'])
 
+
+# OOP
 tom = RatedPlayer("Tom",1600)
 alan = RatedPlayer("Alan",2000)
 print tom.rating
@@ -47,3 +49,15 @@ print alan.rating
 Match(tom,alan,1)
 print tom.rating
 print alan.rating
+print 
+
+# procedural
+tomRating = 1600
+alanRating = 2000
+print tomRating
+print alanRating
+after_match_ratings = new_ratings(tomRating,alanRating,1)
+tomRating = after_match_ratings["player1"]
+alanRating = after_match_ratings["player2"]
+print tomRating
+print alanRating

@@ -1,5 +1,19 @@
 
-def new_ratings(player1_rating,player2_rating,result,k_value=32,should_round=True):
+# how do i go about making this a usable module
+# are there scoping issues, variable naming conventions i should follow
+# code review
+# float - is there a better way?
+# python 2.7 vs 3 compatibility
+
+# move to wihtin object
+# from __future__ imoport div
+# talk to katie pip 
+
+# USER SET K VALUE BASED ON USE CASE
+K_VALUE = 32
+
+
+def new_ratings(player1_rating,player2_rating,result,k_value=K_VALUE,should_round=True):
 	#Assign actual individual results
    player1_result = result
    player2_result = 1 - result
@@ -14,6 +28,7 @@ def new_ratings(player1_rating,player2_rating,result,k_value=32,should_round=Tru
 
    #Optional rounding
    if should_round:
+      # int rounds down and forces type
       player1_new_rating = int(player1_new_rating)
       player2_new_rating = int(player2_new_rating) 
 
@@ -24,21 +39,18 @@ def new_ratings(player1_rating,player2_rating,result,k_value=32,should_round=Tru
    return new_ratings
 
 
-
 class RatedPlayer(object):
    """A rated player"""
    def __init__(self,id,rating):
       self.id = id
-      self.rating = rating
-   def update_rating(self,rating):
       self.rating = rating
 
 class Match(object):
    """Match"""
    def __init__(self,player1,player2,result):
       ratings_after_match = new_ratings(player1.rating,player2.rating,result)
-      player1.update_rating(ratings_after_match['player1'])
-      player2.update_rating(ratings_after_match['player2'])
+      player1.rating = ratings_after_match['player1']
+      player2.rating = ratings_after_match['player2']
 
 
 # OOP
@@ -61,3 +73,4 @@ tomRating = after_match_ratings["player1"]
 alanRating = after_match_ratings["player2"]
 print tomRating
 print alanRating
+

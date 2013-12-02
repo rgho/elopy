@@ -1,0 +1,13 @@
+
+# how do i go about making this a usable module
+# are there scoping issues, variable naming conventions i should follow
+# code review
+# float - is there a better way?
+# python 2.7 vs 3 compatibility
+
+# move to wihtin object
+# from __future__ imoport div
+# talk to katie pip 
+
+# USER SET K VALUE BASED ON USE CASE
+K_VALUE = 32
